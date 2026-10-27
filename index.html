@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Typescript</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Gestione Biblioteca</h1>
+    <form id="bookForm">
+        <div class="form-control">
+            <label for="titolo">Titolo:</label>
+            <input type="text" name="titolo" id="titolo" required>
+        </div>
+        <!-- Autore -->
+         <div class="form-control">
+            <label for="autore">Autore:</label>
+            <input type="text" name="autore" id="autore" required>
+         </div>
+         <!-- Anno -->
+         <div class="form-control">
+            <label for="anno">Anno:</label>
+            <input type="number" name="anno" id="anno" required>
+         </div>
+         <!-- Categoria -->
+          <label for="Categoria">Categoria:</label>
+          <select name="categoria" id="categoria">
+              <option value="Romanzo">Romanzo</option>
+              <option value="Classico">Classico</option>
+              <option value="Fantascienza">Fantascienza</option>
+              <option value="Narrativa">Narrativa</option>
+              <option value="Giallo">Giallo</option>
+          </select>
+          <!-- Quantità -->
+          <div class="form-control">
+            <label for="quantita">Quantità</label>
+            <input type="number" name="quantità" id="quantita" required>
+          </div>
+          <button class="primary" type="submit">Aggiungi libro</button>
+    </form>
+
+    <div class="title-container">
+        <h2>Libri in esposizione</h2>
+        <form id="cercaForm">
+            <div class="form-control">
+                <label for="titolo-cerca">Titolo</label>
+                <input type="text" name="titolo-cerca" id="cerca">
+            </div>
+            <!-- Azioni del form -->
+            <div class="buttons">
+                <button class="primary" type="submit">Cerca</button>
+                <button class="secondary" 
+                id="pulisciFiltro" type="button">Mostra tutti</button>
+            </div>
+        </form>
+    </div>
+    <div class = "form-control">
+        <label for = "anno">Utente selezionato per prestiti/restituzioni</label>
+        <select name = "utentePrestito" id="utentePrestito" required>
+            <!-- Popolata via TS -->
+        </select>
+    </div>
+    <!-- Visualizzazione dei libri disponibili -->
+    <ul id="listaLibri"></ul>
+
+    <h2>Utenti</h2>
+    <ul id = "listaUtenti"></ul>
+
+    <!-- Collegamento a JavaScript -->
+    <script type="module" src="dist/app.js"></script>
+</body>
+</html>
